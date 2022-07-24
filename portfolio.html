@@ -17,8 +17,8 @@
 
 <body>
     <!-- Шапка -->
-    <header>
-        <div class="container-portfolio">
+    <header class="page-header">
+        <div class="container container-header">
             <div class="mein-nav">
                 <nav>
                     <a href="./index.html" class="logo">Web <span class="logo header">Studio</span></a>
@@ -49,6 +49,8 @@
                             </svg>
                             +38 077 777 7777
                         </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
@@ -262,5 +264,13 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const { height: pageHeaderHeight } = document
+            .querySelector(".page-header")
+            .getBoundingClientRect();
+        document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
+
 </body>
 </html>

@@ -14,11 +14,16 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* header {
+header {
   position: fixed;
-  top: 0px;
-  left: 0px;
-} */
+  width: 100%;
+  z-index: 1;
+  background-color: var(--primary-white-color);
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border: 1px solid #ECECEC
+}
 
 /* Отменяет стили */
 .list {
@@ -30,6 +35,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 94px;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;  
@@ -59,9 +65,13 @@ body {
 }
 
 /* Шапка */
+.container-header {
+  margin-bottom: 0px;
+}
+
 .mein-nav {
   display: flex;
-  align-items: center;
+  align-items: center;  
 }
 
 nav {
@@ -223,7 +233,7 @@ nav {
 /* Section */
 section {
   padding-top: 0px;
-  padding-bottom: 95px;
+  padding-bottom: 0px;
 }
 
 .section-title {
@@ -369,11 +379,13 @@ section {
 }
 
 .work .title {
+  bottom: 0px;
+  left: 0%;
   margin-top: 0px;
   margin-bottom: 0px;
 
   color: var(--primary-white-color);
-
+  /* background: rgba(47, 48, 58, 0.8); */
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14em;
@@ -501,6 +513,7 @@ footer {
 .mein-footer {
   display: flex;
   align-items: center;
+  margin-bottom: 0px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -631,18 +644,11 @@ footer {
 }
 
 /* Портфолио */
-.container-portfolio {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  margin-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
 .bar {
   text-align: center;
 
+  margin-top: 100px;
   margin-bottom: 54px;
 }
 

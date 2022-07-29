@@ -61,7 +61,7 @@
         <!--Секция Герой-->
         <section class="hero">
             <h1 class="hero-title">Эффективные решения<br>для вашего бизнеса</h1>
-            <button type="button" class="button primary" data-open-modal>Заказать услугу</button>            
+            <button type="button" class="button primary" data-modal-open>Заказать услугу</button>            
         </section>
 
         <!--Секция Наши прeимущества -->
@@ -439,37 +439,41 @@
         </div>
     </footer>
 
-    <div class="backdrop is-hidde" data-backdrop>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <p class="text">
-                Технокряк это современная площадка распространения вируса.
-                Компании используют эту платформу для цифрового
-                шпионажа и атак на защищённые сервера конкурентов.
-            </p>
-            <button class="button" data-close-modal>Отправить</button>
+            <button class="modal-button" data-modal-close>
+                <!-- Закрить -->
+                <svg class="icon-close">
+                    <use href="./images/sprite-modal.svg#close"></use>
+                </svg>
+            </button>
+            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <ul class="list modal-text flex-modal">
+                <li class="icon-background">
+                    <svg class="icon-name">
+                        <use href="./images/sprite-modal.svg#icon-name"></use>
+                    </svg>
+                    Имя
+                </li>
+
+                <li>
+                    Телефон
+                </li>
+
+                <li>
+                    Почта
+                </li>
+
+                <li>
+                    Комментарий
+                </li>
+                <p>Соглашаюсь с рассылкой и принимаю <a href="" class="link">Условия договора</a></p>
+            </ul>
+            
         </div>
     </div>
 
-    <script>
-        const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
-            closeModalBtn: document.querySelector("[data-close-modal]"),
-            backdrop: document.querySelector("[data-backdrop]"),
-        };
-        
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-        
-        refs.backdrop.addEventListener("click", logBackdropClick);
-        
-        function toggleModal() {
-            refs.backdrop.classList.toggle("is-hidder");
-        }
-        
-        function logBackdropClick() {
-            console.log("Клик в бекдроп");
-        }
-    </script>
+    <script src="./js/modal.js"></script>
 
     <script>
         const { height: pageHeaderHeight } = document

@@ -441,35 +441,52 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="modal-button" data-modal-close>
+            <button class="button-background" data-modal-close>
                 <!-- Закрить -->
                 <svg class="icon-close">
                     <use href="./images/sprite-modal.svg#close"></use>
                 </svg>
             </button>
             <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-            <ul class="list modal-text flex-modal">
+            <ul class="list flex-modal">
                 <li class="icon-background">
                     <svg class="icon-name">
                         <use href="./images/sprite-modal.svg#icon-name"></use>
                     </svg>
-                    Имя
+                    <span class="modal-text">Имя</span>
                 </li>
 
-                <li>
-                    Телефон
+                <li class="icon-background">
+                    <svg class="icon-telephone">
+                        <use href="./images/sprite-modal.svg#icon-telephone"></use>
+                    </svg>
+                    <span class="modal-text">Телефон</span>
                 </li>
 
-                <li>
-                    Почта
+                <li class="icon-background">
+                    <svg class="icon-mail">
+                        <use href="./images/sprite-modal.svg#icon-mail"></use>
+                    </svg>
+                    <span class="modal-text">Почта</span>
                 </li>
 
-                <li>
-                    Комментарий
-                </li>
-                <p>Соглашаюсь с рассылкой и принимаю <a href="" class="link">Условия договора</a></p>
+                <li class="commet-background">
+                    <span class="modal-text">Комментарий</span>
+                </li>                
             </ul>
-            
+
+            <div class="modal-confim-flex">
+                <button type="button" class="button-confim">
+                    <svg class="icon-confim">
+                        <use href="./images/sprite-modal.svg#icon-confim"></use>
+                    </svg>
+                </button>
+                <p class="modal-confim-text">Соглашаюсь с рассылкой и принимаю <a href="" class="modal-link">Условия договора</a></p>
+                
+                <button type="button" class="button primary modal-button">Отправить</button>
+            </div>
+
+
         </div>
     </div>
 

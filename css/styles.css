@@ -689,7 +689,6 @@ footer {
 
 .button.secondery {
   color: var(--primary-text-color);
-  /* background-color: #f5f4fa; */
   background-color: #F5F4FA;
 }
 
@@ -843,7 +842,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
   
   background-color: #FFFFFF;
@@ -851,6 +850,8 @@ footer {
 }
 
 .modal-text {
+  margin-left: 42px;
+
   color: var(--secondary-text-color);
 
   font-weight: 400;
@@ -870,7 +871,7 @@ footer {
   line-height: 23px;  
 }
 
-.modal-button {
+.button-background {
   position: relative;
   display: flex;
   margin-top: 7px;
@@ -884,6 +885,10 @@ footer {
   background-color: var(--primary-white-color);
 }
 
+.button-background:hover .icon-close {
+  fill: var(--accent-color);
+}
+
 .icon-close {
   position: absolute;
   top: 50%;
@@ -895,13 +900,10 @@ footer {
   fill: #000000;
 }
 
-.modal-button:hover .icon-close {
-  fill: var(--accent-color);
-}
-
 .icon-background {
   position: relative;
   width: 448px;
+  margin-bottom: 28px;
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 4px;
@@ -909,13 +911,139 @@ footer {
 
 }
 
+.icon-background:hover {
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.icon-background:hover .modal-text {
+  color: var(--accent-color);
+}
+
+.icon-background:hover .icon-name {
+  fill: var(--accent-color);
+}
+
 .icon-name {
+  position: absolute;
+  top: 14px;
+  left: 19px;
+    
+  width: 12px;
+  height: 12px;
+  fill: var(--primary-text-color);
+}
+
+.flex-modal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.icon-telephone {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+
+  width: 18px;
+  height: 18px;
+  fill: var(--primary-text-color);
+}
+
+.icon-background:hover .icon-telephone {
+  fill: var(--accent-color);
+}
+
+.icon-mail {
+  position: absolute;
+  top: 14px;
+  left: 17.5px;
+
+  width: 15px;
+  height: 12px;
+  fill: var(--primary-text-color);
+}
+
+.icon-background:hover .icon-mail {
+  fill: var(--accent-color);
+}
+
+.commet-background {
+  width: 448px;
+  min-height: 120px;
+  margin-bottom: 20px;
+  padding-top: 12px;
+  
+  border-radius: 4px;
+  border: 1px solid var(--primary-icon-color);
+}
+
+.commet-background:hover {
+  border: 1px solid var(--accent-color);
+  cursor: pointer;
+}
+.commet-background:hover .modal-text {
+  color: var(--accent-color);
+}
+
+.commet-background .modal-text {
+  margin-left: 16px;
+}
+
+.modal-confim-flex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.button-confim {
+  position: relative;
+  width: 16px;
+  height: 15px;
+
+  margin-right: 8.3px;
+  margin-bottom: 30px;
+
+  background-color: var(--primary-white-color);
+  border: 2px solid var(--primary-text-color);
+}
+
+.button-confim:hover,
+.button-confim:focus {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.icon-confim {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  width: 15px;
+  height: 12px;  
+  fill: var(--primary-white-color);
+}
+
+.modal-confim-text {
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.modal-link {
+  color: var(--accent-color);
+}
+
+.modal-button {
+  text-align: center;
   
-  width: 11px;
-  height: 11px;
-  fill: #000000;
 }
